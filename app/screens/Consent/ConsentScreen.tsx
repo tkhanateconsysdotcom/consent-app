@@ -1,6 +1,12 @@
 import React from "react";
 import { ScrollView } from "react-native";
 import { useSelector } from "react-redux";
+import {
+  AdMobBanner,
+  AdMobInterstitial,
+  PublisherBanner,
+  AdMobRewarded,
+} from "react-native-admob";
 
 import { Text, Button } from "components";
 import { t } from "utils";
@@ -48,8 +54,32 @@ const ConsentScreen = (props: Props) => {
     selectors.getCurrentYearOtherAcceptanceValue
   );
 
+  // Display an interstitial
+  AdMobInterstitial.setAdUnitID("ca-app-pub-4482303808779676~5440604106");
+  AdMobInterstitial.setTestDevices([AdMobInterstitial.simulatorId]);
+  AdMobInterstitial.requestAd().then(() => AdMobInterstitial.showAd());
+
+  // Display a rewarded ad
+  AdMobRewarded.setAdUnitID("ca-app-pub-4482303808779676~5440604106");
+  AdMobRewarded.requestAd().then(() => AdMobRewarded.showAd());
+
   return (
     <ScrollView style={styles.container}>
+      <AdMobBanner
+        adSize="fullBanner"
+        adUnitID="ca-app-pub-4482303808779676~5440604106"
+        testDevices={[AdMobBanner.simulatorId]}
+        onAdFailedToLoad={(error) => console.error(error)}
+        style={{ width: "auto", height: "auto" }}
+      />
+      <PublisherBanner
+        adSize="fullBanner"
+        adUnitID="ca-app-pub-4482303808779676~5440604106"
+        testDevices={[PublisherBanner.simulatorId]}
+        onAdFailedToLoad={(error) => console.error(error)}
+        onAppEvent={(event) => console.log(event.name, event.info)}
+        style={{ width: "auto", height: "auto" }}
+      />
       <ProgressChart
         isMonth
         totalPartners={totalCurrentMonthPartners}
