@@ -4,7 +4,7 @@ import { pathOr } from "ramda";
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation, useRoute } from "@react-navigation/native";
 
-import { emissions } from "ducks";
+import { partners } from "ducks";
 import { navigate } from "navigation";
 
 import styles from "./InfoButton.styles";
@@ -14,11 +14,11 @@ const InfoButton = () => {
   const navigator = navigate(navigation);
 
   const route = useRoute();
-  const emissionId = pathOr("", ["params", "id"], route);
+  const partnerId = pathOr("", ["params", "id"], route);
 
-  const { emissionModelType } =
+  const { partnerModelType } =
     useSelector((state) =>
-      emissions.selectors.getEmissionById(state, emissionId)
+      partners.selectors.getPartnerById(state, partnerId)
     ) || {};
 
   return (
@@ -26,7 +26,7 @@ const InfoButton = () => {
       name="md-information-circle"
       size={26}
       style={styles.infoIcon}
-      onPress={() => navigator.openInfoModal({ emissionModelType })}
+      onPress={() => navigator.openInfoModal({ partnerModelType })}
     />
   );
 };

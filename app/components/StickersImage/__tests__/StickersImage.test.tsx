@@ -6,12 +6,12 @@ import StickersImage from "../";
 jest.unmock("../");
 
 it("renders correctly StickersImage with bike image", () => {
-  const tree = create(<StickersImage sticker="bike" />).toJSON();
+  const tree = create(<StickersImage sticker="treeHeart" />).toJSON();
   expect(tree).toMatchSnapshot();
 });
 
 it("renders correctly StickersImage with restaurant image", () => {
-  const tree = create(<StickersImage sticker="restaurant" />).toJSON();
+  const tree = create(<StickersImage sticker="romanticDinner" />).toJSON();
   expect(tree).toMatchSnapshot();
 });
 

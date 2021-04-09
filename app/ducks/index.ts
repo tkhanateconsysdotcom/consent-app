@@ -1,5 +1,5 @@
-import emissions from "./emissions";
-import budget from "./budget";
+import partners from "./partners";
+import consent from "./consent";
 import userPreferences from "./userPreferences";
 
-export { emissions, budget, userPreferences };
+export { partners, consent, userPreferences };

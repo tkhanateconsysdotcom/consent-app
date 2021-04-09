@@ -1,14 +1,14 @@
 <h1 align="center">🌱 NMF.earth app</h1>
-<h3 align="center">Understand and reduce your carbon footprint</h3>
+<h3 align="center">Understand and reduce your acceptance footprint</h3>
 
 <br />
 
 <p align="center">
-  <a href="https://apps.apple.com/us/app/nmf-earth/id1494561829">
-    <img alt="app-store" src="https://github.com/NotMyFaultEarth/nmf-app/blob/main/app-store.png" />
+  <a href="https://apps.apple.com/us/app/consent-app/id1494561829">
+    <img alt="app-store" src="https://github.com/tkhanateconsysdotcom/consent-app/blob/main/app-store.png" />
   </a>
-  <a href="https://play.google.com/store/apps/details?id=nmf.earth">
-    <img alt="google-play" src="https://github.com/NotMyFaultEarth/nmf-app/blob/main/play-store.png" />
+  <a href="https://play.google.com/store/apps/details?id=consentapp">
+    <img alt="google-play" src="https://github.com/tkhanateconsysdotcom/consent-app/blob/main/play-store.png" />
   </a>
 </p>
 

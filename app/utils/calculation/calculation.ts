@@ -9,7 +9,7 @@ import {
   streaming,
 } from "carbon-footprint";
 
-import { EmissionType, Emission } from "interfaces";
+import { PartnerType, Partner } from "interfaces";
 
 const isNilOrEmpty = either(isNil, isEmpty);
 
@@ -28,7 +28,7 @@ const getFlightType = (duration: number) => {
   return TransportEnum.longHaulFlight;
 };
 
-const getFlightEmissionValue = (duration: number) => {
+const getFlightPartnerValue = (duration: number) => {
   switch (getFlightType(duration)) {
     case TransportEnum.shortHaulFlight: {
       /* Paris -> Toulouse 1h15 AF6122 588 km */
@@ -56,20 +56,20 @@ const getFlightEmissionValue = (duration: number) => {
   }
 };
 
-const getC02ValueFromEmission = (emission: Emission) => {
-  if (emission.emissionType === EmissionType.custom) {
-    return emission.value;
+const getC02ValueFromPartner = (partner: Partner) => {
+  if (partner.partnerType === PartnerType.custom) {
+    return partner.value;
   }
 
-  if (emission.emissionType === EmissionType.electricity) {
-    return emission.value * electricity[emission.emissionModelType];
+  if (partner.partnerType === PartnerType.onenight) {
+    return partner.value * electricity[partner.partnerModelType];
   }
 
-  if (emission.emissionType === EmissionType.streaming) {
+  if (partner.partnerType === PartnerType.platonic) {
     return getInternetUsageCarbonImpact(
-      emission.value,
-      streaming[emission.emissionModelType] * emission.value,
-      emission.location || ElectricityEnum.world
+      partner.value,
+      streaming[partner.partnerModelType] * partner.value,
+      partner.location || ElectricityEnum.world
     );
   }
 
@@ -77,28 +77,28 @@ const getC02ValueFromEmission = (emission: Emission) => {
     ...transport,
     ...food,
   };
-  return emission.value * model[emission.emissionModelType];
+  return partner.value * model[partner.partnerModelType];
 };
 
-const getCreationDate: (Emission) => string = prop("creationDate");
+const getCreationDate: (Partner) => string = prop("creationDate");
 
-const getLatestEmission = (emissions: Array<Emission>) =>
-  isNilOrEmpty(emissions)
+const getLatestPartner = (partners: Array<Partner>) =>
+  isNilOrEmpty(partners)
     ? null
-    : reduce(maxBy(getCreationDate), emissions[0], emissions);
+    : reduce(maxBy(getCreationDate), partners[0], partners);
 
 const toKWH = (x: number) => (x * 3.6) / Math.pow(10, -6);
 const toKgCO2 = (x: number) => x * 1000;
-const getCarbonIntensityInGramPerKWHromKgPerJoules = pipe(
+const getAcceptanceIntensityInGramPerKWHromKgPerJoules = pipe(
   toKWH,
   toKgCO2,
   Math.round
 );
 
 export default {
-  getLatestEmission,
-  getC02ValueFromEmission,
+  getLatestPartner,
+  getC02ValueFromPartner,
   getFlightType,
-  getFlightEmissionValue,
-  getCarbonIntensityInGramPerKWHromKgPerJoules,
+  getFlightPartnerValue,
+  getAcceptanceIntensityInGramPerKWHromKgPerJoules,
 };

@@ -24,7 +24,7 @@ const IntroScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.imageView}>
-        <StickersImage sticker="bike" />
+        <StickersImage sticker="treeHeart" />
       </View>
       <View style={styles.termsOfUseView}>
         <Text.H3 style={styles.text}>{t("INTRO_SCREEN_WELCOME")}</Text.H3>
@@ -33,7 +33,7 @@ const IntroScreen = () => {
         </Text.Tertiary>
         <TouchableOpacity
           onPress={() =>
-            WebBrowser.openBrowserAsync("http://nmf.earth/terms-of-use.pdf")
+            WebBrowser.openBrowserAsync("http://google.com/terms-of-use.pdf")
           }
         >
           <Text.Tertiary green>{t("INTRO_SCREEN_TERMS_OF_USE")}</Text.Tertiary>

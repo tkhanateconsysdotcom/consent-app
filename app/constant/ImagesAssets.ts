@@ -1,11 +1,11 @@
 const imageAssets = {
   stickers: {
     earth: require("../../assets/images/stickers/earth.png"),
-    bike: require("../../assets/images/stickers/bike.png"),
-    restaurant: require("../../assets/images/stickers/restaurant.png"),
+    treeHeart: require("../../assets/images/stickers/tree-heart.png"),
+    romanticDinner: require("../../assets/images/stickers/romantic-dinner.jpeg"),
   },
   logos: {
-    nmf: require("../../assets/images/logos/nmf.png"),
+    consent: require("../../assets/images/logos/consent.png"),
   },
 };
 

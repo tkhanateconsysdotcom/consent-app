@@ -17,7 +17,7 @@ exports[`MyLocationScreen renders correctly 1`] = `
       }
     }
   >
-    Please select a country in order to improve emissions calculations for streaming and electricity.
+    Please select a country in order to improve partners calculations for streaming and electricity.
   </Text.Primary>
   <View
     style={
@@ -33,7 +33,7 @@ exports[`MyLocationScreen renders correctly 1`] = `
         }
       }
     >
-      My carbon intensity : 
+      My acceptance intensity : 
     </Text.Primary>
     <Text.Primary
       bold={true}

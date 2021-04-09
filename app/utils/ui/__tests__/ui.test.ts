@@ -11,7 +11,7 @@ import {
   Linking,
 } from "react-native";
 
-import { EmissionType } from "interfaces";
+import { PartnerType } from "interfaces";
 
 import ui from "../";
 import * as translationUtils from "../../translations/i18n";
@@ -103,43 +103,43 @@ describe("tests for ui.isDarkModeEnabled", () => {
 });
 
 describe("tests for ui.getIconFromModelType", () => {
-  describe("electricity type emissions", () => {
-    it("returns md-flash if electricity Emission model", () => {
+  describe("electricity type partners", () => {
+    it("returns md-flash if electricity Partner model", () => {
       // arrange
-      const electricityEmissions = Object.keys(ElectricityEnum);
-      const emissionModelType =
-        electricityEmissions[
-          Math.floor(Math.random() * electricityEmissions.length)
+      const electricityPartners = Object.keys(ElectricityEnum);
+      const partnerModelType =
+        electricityPartners[
+          Math.floor(Math.random() * electricityPartners.length)
         ];
 
       // act
-      const icon = ui.getIconFromModelType(emissionModelType);
+      const icon = ui.getIconFromModelType(partnerModelType);
 
       // assert
       expect(icon).toBe("md-flash");
     });
   });
 
-  describe("custom type emissions", () => {
-    it("returns md-build if custom Emission model", () => {
+  describe("custom type partners", () => {
+    it("returns md-build if custom Partner model", () => {
       // arrange
-      const emissionModelType = EmissionType.custom;
+      const partnerModelType = PartnerType.custom;
 
       // act
-      const icon = ui.getIconFromModelType(emissionModelType);
+      const icon = ui.getIconFromModelType(partnerModelType);
 
       // assert
       expect(icon).toBe("md-build");
     });
   });
 
-  describe("food type emissions", () => {
+  describe("food type partners", () => {
     it("returns md-restaurant if it is food of type redMeat", () => {
       // arrange
-      const emissionModelType = FoodEnum.redMeat;
+      const partnerModelType = FoodEnum.redMeat;
 
       // act
-      const icon = ui.getIconFromModelType(emissionModelType);
+      const icon = ui.getIconFromModelType(partnerModelType);
 
       // assert
       expect(icon).toBe("md-restaurant");
@@ -147,10 +147,10 @@ describe("tests for ui.getIconFromModelType", () => {
 
     it("returns md-restaurant if it is food of type whiteMeat", () => {
       // arrange
-      const emissionModelType = FoodEnum.whiteMeat;
+      const partnerModelType = FoodEnum.whiteMeat;
 
       // act
-      const icon = ui.getIconFromModelType(emissionModelType);
+      const icon = ui.getIconFromModelType(partnerModelType);
 
       // assert
       expect(icon).toBe("md-restaurant");
@@ -158,10 +158,10 @@ describe("tests for ui.getIconFromModelType", () => {
 
     it("returns md-restaurant if it is food of type chocolate", () => {
       // arrange
-      const emissionModelType = FoodEnum.chocolate;
+      const partnerModelType = FoodEnum.chocolate;
 
       // act
-      const icon = ui.getIconFromModelType(emissionModelType);
+      const icon = ui.getIconFromModelType(partnerModelType);
 
       // assert
       expect(icon).toBe("md-restaurant");
@@ -169,10 +169,10 @@ describe("tests for ui.getIconFromModelType", () => {
 
     it("returns md-restaurant if it is food of type fish", () => {
       // arrange
-      const emissionModelType = FoodEnum.fish;
+      const partnerModelType = FoodEnum.fish;
 
       // act
-      const icon = ui.getIconFromModelType(emissionModelType);
+      const icon = ui.getIconFromModelType(partnerModelType);
 
       // assert
       expect(icon).toBe("md-restaurant");
@@ -180,23 +180,23 @@ describe("tests for ui.getIconFromModelType", () => {
 
     it("returns md-cafe if it is food of type coffee", () => {
       // arrange
-      const emissionModelType = FoodEnum.coffee;
+      const partnerModelType = FoodEnum.coffee;
 
       // act
-      const icon = ui.getIconFromModelType(emissionModelType);
+      const icon = ui.getIconFromModelType(partnerModelType);
 
       // assert
       expect(icon).toBe("md-cafe");
     });
   });
 
-  describe("transport type emissions", () => {
+  describe("transport type partners", () => {
     it("returns md-airplane if it is transport of type shortHaulFlight", () => {
       // arrange
-      const emissionModelType = TransportEnum.shortHaulFlight;
+      const partnerModelType = TransportEnum.shortHaulFlight;
 
       // act
-      const icon = ui.getIconFromModelType(emissionModelType);
+      const icon = ui.getIconFromModelType(partnerModelType);
 
       // assert
       expect(icon).toBe("md-airplane");
@@ -204,10 +204,10 @@ describe("tests for ui.getIconFromModelType", () => {
 
     it("returns md-airplane if it is transport of type mediumHaulFlight", () => {
       // arrange
-      const emissionModelType = TransportEnum.mediumHaulFlight;
+      const partnerModelType = TransportEnum.mediumHaulFlight;
 
       // act
-      const icon = ui.getIconFromModelType(emissionModelType);
+      const icon = ui.getIconFromModelType(partnerModelType);
 
       // assert
       expect(icon).toBe("md-airplane");
@@ -215,10 +215,10 @@ describe("tests for ui.getIconFromModelType", () => {
 
     it("returns md-airplane if it is transport of type longHaulFlight", () => {
       // arrange
-      const emissionModelType = TransportEnum.longHaulFlight;
+      const partnerModelType = TransportEnum.longHaulFlight;
 
       // act
-      const icon = ui.getIconFromModelType(emissionModelType);
+      const icon = ui.getIconFromModelType(partnerModelType);
 
       // assert
       expect(icon).toBe("md-airplane");
@@ -226,10 +226,10 @@ describe("tests for ui.getIconFromModelType", () => {
 
     it("returns md-train if it is transport of type train", () => {
       // arrange
-      const emissionModelType = TransportEnum.train;
+      const partnerModelType = TransportEnum.train;
 
       // act
-      const icon = ui.getIconFromModelType(emissionModelType);
+      const icon = ui.getIconFromModelType(partnerModelType);
 
       // assert
       expect(icon).toBe("md-train");
@@ -237,10 +237,10 @@ describe("tests for ui.getIconFromModelType", () => {
 
     it("returns md-car if it is transport of type car", () => {
       // arrange
-      const emissionModelType = TransportEnum.car;
+      const partnerModelType = TransportEnum.car;
 
       // act
-      const icon = ui.getIconFromModelType(emissionModelType);
+      const icon = ui.getIconFromModelType(partnerModelType);
 
       // assert
       expect(icon).toBe("md-car");
@@ -248,10 +248,10 @@ describe("tests for ui.getIconFromModelType", () => {
 
     it("returns md-boat if it is transport of type boat", () => {
       // arrange
-      const emissionModelType = TransportEnum.boat;
+      const partnerModelType = TransportEnum.boat;
 
       // act
-      const icon = ui.getIconFromModelType(emissionModelType);
+      const icon = ui.getIconFromModelType(partnerModelType);
 
       // assert
       expect(icon).toBe("md-boat");
@@ -259,10 +259,10 @@ describe("tests for ui.getIconFromModelType", () => {
 
     it("returns md-motorbike if it is transport of type motorbike", () => {
       // arrange
-      const emissionModelType = TransportEnum.motorbike;
+      const partnerModelType = TransportEnum.motorbike;
 
       // act
-      const icon = ui.getIconFromModelType(emissionModelType);
+      const icon = ui.getIconFromModelType(partnerModelType);
 
       // assert
       expect(icon).toBe("md-bicycle");
@@ -270,23 +270,23 @@ describe("tests for ui.getIconFromModelType", () => {
 
     it("returns md-bus if it is transport of type bus", () => {
       // arrange
-      const emissionModelType = TransportEnum.bus;
+      const partnerModelType = TransportEnum.bus;
 
       // act
-      const icon = ui.getIconFromModelType(emissionModelType);
+      const icon = ui.getIconFromModelType(partnerModelType);
 
       // assert
       expect(icon).toBe("md-bus");
     });
   });
 
-  describe("streaming emission type", () => {
+  describe("streaming partner type", () => {
     it("returns md-film for HDVideo", () => {
       // arrange
-      const emissionModelType = StreamingEnum.HDVideo;
+      const partnerModelType = StreamingEnum.HDVideo;
 
       // act
-      const icon = ui.getIconFromModelType(emissionModelType);
+      const icon = ui.getIconFromModelType(partnerModelType);
 
       // assert
       expect(icon).toBe("md-film");
@@ -294,10 +294,10 @@ describe("tests for ui.getIconFromModelType", () => {
 
     it("returns md-film for fullHDVideo", () => {
       // arrange
-      const emissionModelType = StreamingEnum.fullHDVideo;
+      const partnerModelType = StreamingEnum.fullHDVideo;
 
       // act
-      const icon = ui.getIconFromModelType(emissionModelType);
+      const icon = ui.getIconFromModelType(partnerModelType);
 
       // assert
       expect(icon).toBe("md-film");
@@ -305,10 +305,10 @@ describe("tests for ui.getIconFromModelType", () => {
 
     it("returns md-film for ultraHDVideo", () => {
       // arrange
-      const emissionModelType = StreamingEnum.ultraHDVideo;
+      const partnerModelType = StreamingEnum.ultraHDVideo;
 
       // act
-      const icon = ui.getIconFromModelType(emissionModelType);
+      const icon = ui.getIconFromModelType(partnerModelType);
 
       // assert
       expect(icon).toBe("md-film");
@@ -316,22 +316,22 @@ describe("tests for ui.getIconFromModelType", () => {
 
     it("returns md-musical-note for audioMP3", () => {
       // arrange
-      const emissionModelType = StreamingEnum.audioMP3;
+      const partnerModelType = StreamingEnum.audioMP3;
 
       // act
-      const icon = ui.getIconFromModelType(emissionModelType);
+      const icon = ui.getIconFromModelType(partnerModelType);
 
       // assert
       expect(icon).toBe("md-musical-note");
     });
   });
 
-  it("returns md-build for any random emission type", () => {
+  it("returns md-build for any random partner type", () => {
     // arrange
-    const emissionModelType = "someRandomString";
+    const partnerModelType = "someRandomString";
 
     // act
-    const icon = ui.getIconFromModelType(emissionModelType);
+    const icon = ui.getIconFromModelType(partnerModelType);
 
     // assert
     expect(icon).toBe("md-build");
@@ -349,49 +349,43 @@ describe("tests for ui.getTranslationModelType", () => {
     jest.clearAllMocks();
   });
 
-  describe("electricity type emissions", () => {
-    it("returns UI_ELECTRICITY if electricity Emission model", () => {
+  describe("electricity type partners", () => {
+    it("returns UI_ELECTRICITY if electricity Partner model", () => {
       // arrange
-      const electricityEmissions = Object.keys(ElectricityEnum);
-      const emissionModelType =
-        electricityEmissions[
-          Math.floor(Math.random() * electricityEmissions.length)
+      const electricityPartners = Object.keys(ElectricityEnum);
+      const partnerModelType =
+        electricityPartners[
+          Math.floor(Math.random() * electricityPartners.length)
         ];
 
       // act
-      const translationModelType = ui.getTranslationModelType(
-        emissionModelType
-      );
+      const translationModelType = ui.getTranslationModelType(partnerModelType);
 
       // assert
       expect(translationModelType).toBe("UI_ELECTRICITY");
     });
   });
 
-  describe("custom type emissions", () => {
-    it("returns UI_CUSTOM if custom Emission model", () => {
+  describe("custom type partners", () => {
+    it("returns UI_CUSTOM if custom Partner model", () => {
       // arrange
-      const emissionModelType = EmissionType.custom;
+      const partnerModelType = PartnerType.custom;
 
       // act
-      const translationModelType = ui.getTranslationModelType(
-        emissionModelType
-      );
+      const translationModelType = ui.getTranslationModelType(partnerModelType);
 
       // assert
       expect(translationModelType).toBe("UI_CUSTOM");
     });
   });
 
-  describe("food type emissions", () => {
+  describe("food type partners", () => {
     it("returns UI_RED_MEAT if it is food of type redMeat", () => {
       // arrange
-      const emissionModelType = FoodEnum.redMeat;
+      const partnerModelType = FoodEnum.redMeat;
 
       // act
-      const translationModelType = ui.getTranslationModelType(
-        emissionModelType
-      );
+      const translationModelType = ui.getTranslationModelType(partnerModelType);
 
       // assert
       expect(translationModelType).toBe("UI_RED_MEAT");
@@ -399,12 +393,10 @@ describe("tests for ui.getTranslationModelType", () => {
 
     it("returns UI_WHITE_MEAT if it is food of type whiteMeat", () => {
       // arrange
-      const emissionModelType = FoodEnum.whiteMeat;
+      const partnerModelType = FoodEnum.whiteMeat;
 
       // act
-      const translationModelType = ui.getTranslationModelType(
-        emissionModelType
-      );
+      const translationModelType = ui.getTranslationModelType(partnerModelType);
 
       // assert
       expect(translationModelType).toBe("UI_WHITE_MEAT");
@@ -412,12 +404,10 @@ describe("tests for ui.getTranslationModelType", () => {
 
     it("returns UI_CHOCOLATE if it is food of type chocolate", () => {
       // arrange
-      const emissionModelType = FoodEnum.chocolate;
+      const partnerModelType = FoodEnum.chocolate;
 
       // act
-      const translationModelType = ui.getTranslationModelType(
-        emissionModelType
-      );
+      const translationModelType = ui.getTranslationModelType(partnerModelType);
 
       // assert
       expect(translationModelType).toBe("UI_CHOCOLATE");
@@ -425,12 +415,10 @@ describe("tests for ui.getTranslationModelType", () => {
 
     it("returns UI_COFFEE if it is food of type coffee", () => {
       // arrange
-      const emissionModelType = FoodEnum.coffee;
+      const partnerModelType = FoodEnum.coffee;
 
       // act
-      const translationModelType = ui.getTranslationModelType(
-        emissionModelType
-      );
+      const translationModelType = ui.getTranslationModelType(partnerModelType);
 
       // assert
       expect(translationModelType).toBe("UI_COFFEE");
@@ -438,27 +426,23 @@ describe("tests for ui.getTranslationModelType", () => {
 
     it("returns UI_FISH if it is food of type fish", () => {
       // arrange
-      const emissionModelType = FoodEnum.fish;
+      const partnerModelType = FoodEnum.fish;
 
       // act
-      const translationModelType = ui.getTranslationModelType(
-        emissionModelType
-      );
+      const translationModelType = ui.getTranslationModelType(partnerModelType);
 
       // assert
       expect(translationModelType).toBe("UI_FISH");
     });
   });
 
-  describe("transport type emissions", () => {
+  describe("transport type partners", () => {
     it("returns UI_PLANE if it is transport of type shortHaulFlight", () => {
       // arrange
-      const emissionModelType = TransportEnum.shortHaulFlight;
+      const partnerModelType = TransportEnum.shortHaulFlight;
 
       // act
-      const translationModelType = ui.getTranslationModelType(
-        emissionModelType
-      );
+      const translationModelType = ui.getTranslationModelType(partnerModelType);
 
       // assert
       expect(translationModelType).toBe("UI_PLANE");
@@ -466,12 +450,10 @@ describe("tests for ui.getTranslationModelType", () => {
 
     it("returns UI_PLANE if it is transport of type mediumHaulFlight", () => {
       // arrange
-      const emissionModelType = TransportEnum.mediumHaulFlight;
+      const partnerModelType = TransportEnum.mediumHaulFlight;
 
       // act
-      const translationModelType = ui.getTranslationModelType(
-        emissionModelType
-      );
+      const translationModelType = ui.getTranslationModelType(partnerModelType);
 
       // assert
       expect(translationModelType).toBe("UI_PLANE");
@@ -479,12 +461,10 @@ describe("tests for ui.getTranslationModelType", () => {
 
     it("returns UI_PLANE if it is transport of type longHaulFlight", () => {
       // arrange
-      const emissionModelType = TransportEnum.longHaulFlight;
+      const partnerModelType = TransportEnum.longHaulFlight;
 
       // act
-      const translationModelType = ui.getTranslationModelType(
-        emissionModelType
-      );
+      const translationModelType = ui.getTranslationModelType(partnerModelType);
 
       // assert
       expect(translationModelType).toBe("UI_PLANE");
@@ -492,12 +472,10 @@ describe("tests for ui.getTranslationModelType", () => {
 
     it("returns UI_TRAIN if it is transport of type train", () => {
       // arrange
-      const emissionModelType = TransportEnum.train;
+      const partnerModelType = TransportEnum.train;
 
       // act
-      const translationModelType = ui.getTranslationModelType(
-        emissionModelType
-      );
+      const translationModelType = ui.getTranslationModelType(partnerModelType);
 
       // assert
       expect(translationModelType).toBe("UI_TRAIN");
@@ -505,12 +483,10 @@ describe("tests for ui.getTranslationModelType", () => {
 
     it("returns UI_CAR if it is transport of type car", () => {
       // arrange
-      const emissionModelType = TransportEnum.car;
+      const partnerModelType = TransportEnum.car;
 
       // act
-      const translationModelType = ui.getTranslationModelType(
-        emissionModelType
-      );
+      const translationModelType = ui.getTranslationModelType(partnerModelType);
 
       // assert
       expect(translationModelType).toBe("UI_CAR");
@@ -518,12 +494,10 @@ describe("tests for ui.getTranslationModelType", () => {
 
     it("returns UI_BOAT if it is transport of type boat", () => {
       // arrange
-      const emissionModelType = TransportEnum.boat;
+      const partnerModelType = TransportEnum.boat;
 
       // act
-      const translationModelType = ui.getTranslationModelType(
-        emissionModelType
-      );
+      const translationModelType = ui.getTranslationModelType(partnerModelType);
 
       // assert
       expect(translationModelType).toBe("UI_BOAT");
@@ -531,12 +505,10 @@ describe("tests for ui.getTranslationModelType", () => {
 
     it("returns UI_MOTORBIKE if it is transport of type motorbike", () => {
       // arrange
-      const emissionModelType = TransportEnum.motorbike;
+      const partnerModelType = TransportEnum.motorbike;
 
       // act
-      const translationModelType = ui.getTranslationModelType(
-        emissionModelType
-      );
+      const translationModelType = ui.getTranslationModelType(partnerModelType);
 
       // assert
       expect(translationModelType).toBe("UI_MOTORBIKE");
@@ -544,27 +516,23 @@ describe("tests for ui.getTranslationModelType", () => {
 
     it("returns UI_BUS if it is transport of type bus", () => {
       // arrange
-      const emissionModelType = TransportEnum.bus;
+      const partnerModelType = TransportEnum.bus;
 
       // act
-      const translationModelType = ui.getTranslationModelType(
-        emissionModelType
-      );
+      const translationModelType = ui.getTranslationModelType(partnerModelType);
 
       // assert
       expect(translationModelType).toBe("UI_BUS");
     });
   });
 
-  describe("streaming emission type", () => {
+  describe("streaming partner type", () => {
     it("returns UI_HD_VIDEO for HDVideo", () => {
       // arrange
-      const emissionModelType = StreamingEnum.HDVideo;
+      const partnerModelType = StreamingEnum.HDVideo;
 
       // act
-      const translationModelType = ui.getTranslationModelType(
-        emissionModelType
-      );
+      const translationModelType = ui.getTranslationModelType(partnerModelType);
 
       // assert
       expect(translationModelType).toBe("UI_HD_VIDEO");
@@ -572,12 +540,10 @@ describe("tests for ui.getTranslationModelType", () => {
 
     it("returns UI_FULL_HD_VIDEO for fullHDVideo", () => {
       // arrange
-      const emissionModelType = StreamingEnum.fullHDVideo;
+      const partnerModelType = StreamingEnum.fullHDVideo;
 
       // act
-      const translationModelType = ui.getTranslationModelType(
-        emissionModelType
-      );
+      const translationModelType = ui.getTranslationModelType(partnerModelType);
 
       // assert
       expect(translationModelType).toBe("UI_FULL_HD_VIDEO");
@@ -585,12 +551,10 @@ describe("tests for ui.getTranslationModelType", () => {
 
     it("returns UI_ULTRA_HD_VIDEO for ultraHDVideo", () => {
       // arrange
-      const emissionModelType = StreamingEnum.ultraHDVideo;
+      const partnerModelType = StreamingEnum.ultraHDVideo;
 
       // act
-      const translationModelType = ui.getTranslationModelType(
-        emissionModelType
-      );
+      const translationModelType = ui.getTranslationModelType(partnerModelType);
 
       // assert
       expect(translationModelType).toBe("UI_ULTRA_HD_VIDEO");
@@ -598,24 +562,22 @@ describe("tests for ui.getTranslationModelType", () => {
 
     it("returns UI_AUDIO for audioMP3", () => {
       // arrange
-      const emissionModelType = StreamingEnum.audioMP3;
+      const partnerModelType = StreamingEnum.audioMP3;
 
       // act
-      const translationModelType = ui.getTranslationModelType(
-        emissionModelType
-      );
+      const translationModelType = ui.getTranslationModelType(partnerModelType);
 
       // assert
       expect(translationModelType).toBe("UI_AUDIO");
     });
   });
 
-  it("returns UI_CUSTOM for any random emission type", () => {
+  it("returns UI_CUSTOM for any random partner type", () => {
     // arrange
-    const emissionModelType = "someRandomString";
+    const partnerModelType = "someRandomString";
 
     // act
-    const translationModelType = ui.getTranslationModelType(emissionModelType);
+    const translationModelType = ui.getTranslationModelType(partnerModelType);
 
     // assert
     expect(translationModelType).toBe("UI_CUSTOM");

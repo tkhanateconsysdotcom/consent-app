@@ -12,7 +12,7 @@ exports[`ComingSoonScreen renders correctly 1`] = `
 >
   <View>
     <StickersImage
-      sticker="bike"
+      sticker="treeHeart"
     />
     <View
       style={

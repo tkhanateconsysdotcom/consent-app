@@ -35,7 +35,7 @@ const SplashScreen: React.FC<Props> = ({ screenAnimationComplete }) => {
       <View style={styles.imgContainer}>
         <Image
           resizeMode={"contain"}
-          source={require("../../../assets/images/stickers/restaurant.png")}
+          source={require("../../../assets/images/stickers/romantic-dinner.jpeg")}
           style={styles.img}
         />
       </View>

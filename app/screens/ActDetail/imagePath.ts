@@ -1,5 +1,5 @@
 export default {
-  bike: require("../../../assets/images/guide/bike.png"),
+  treeHeart: require("../../../assets/images/guide/tree-heart.png"),
   earth: require("../../../assets/images/guide/earth.png"),
-  restaurant: require("../../../assets/images/guide/restaurant.png"),
+  romanticDinner: require("../../../assets/images/guide/romantic-dinner.jpeg"),
 };

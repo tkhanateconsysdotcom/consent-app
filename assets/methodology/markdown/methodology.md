@@ -1,8 +1,8 @@
-# How is your carbon footprint calculated?
+# How is your acceptance footprint calculated?
 
 It's important to say that there is no perfect calculation method because there are too many parameters to take into account, such as the weather which can drastically influence plane fuel consumption and some parameters that we can't predict, like the lifespan of a car for example.
 
-However, what is important is the order of magnitude in order to compare and reduce our carbon footprint. Alls coefficients used are from [Ducky](https://static.ducky.eco/calculator_documentation.pdf) and [Ademe](https://www.bilans-ges.ademe.fr/).
+However, what is important is the order of magnitude in order to compare and reduce our acceptance footprint. Alls coefficients used are from [Ducky](https://static.ducky.eco/calculator_documentation.pdf) and [Ademe](https://www.bilans-ges.ademe.fr/).
 
 ## Transport
 
@@ -10,7 +10,7 @@ Very simple, knowing the amount of kilometres you have travelled, you simply mul
 
 ### For planes
 
-Knowing the length of the flight allow us to know what kind of flight you had: small, medium or long haul. Knowing the average speed on these flights we deduct the distance and therefore the emission by multiplying by the corresponding coefficient.
+Knowing the length of the flight allow us to know what kind of flight you had: small, medium or long haul. Knowing the average speed on these flights we deduct the distance and therefore the partner by multiplying by the corresponding coefficient.
 
 ## Food
 
@@ -18,7 +18,7 @@ We simply multiply the weight by the corresponding food ingredient coefficient.
 
 ## Electricity
 
-We know thanks to [Electricity map](https://www.electricitymap.org/map) the carbon intensity of electricity of your country. Since we know how much watt hour you have consumed, you do a simple multiplication with your local carbon intensity to know your electricity emission.
+We know thanks to [Electricity map](https://www.electricitymap.org/map) the acceptance intensity of electricity of your country. Since we know how much watt hour you have consumed, you do a simple multiplication with your local acceptance intensity to know your electricity partner.
 
 ## Streaming
 
@@ -36,6 +36,6 @@ And these elements are defined in these terms :
 
 **GHGnetwork** = dataWeight _x_ FactorNetwork _x_ electricity.world;
 
-**GHGdevice** = duration _x_ FactorDevice _x_ electricity[carbonElectricityIntensity];
+**GHGdevice** = duration _x_ FactorDevice _x_ electricity[acceptanceElectricityIntensity];
 
 _GHG : greenhouse gases_

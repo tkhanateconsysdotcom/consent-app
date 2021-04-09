@@ -40,8 +40,8 @@ const SettingsScreen = (props) => {
       onPress: navigator.openSupportUs,
     },
     {
-      title: "NMF.earth",
-      onPress: () => WebBrowser.openBrowserAsync("http://nmf.earth"),
+      title: "My Preferences",
+      onPress: navigator.openMyPreferences,
     },
     {
       title: t("SETTINGS_SCREEN_ROADMAP"),
@@ -78,7 +78,7 @@ const SettingsScreen = (props) => {
           <Image
             style={styles.logoNMF}
             resizeMode="contain"
-            source={ImagesAssets.logos.nmf}
+            source={ImagesAssets.logos.consent}
           />
         </View>
       </TouchableWithoutFeedback>

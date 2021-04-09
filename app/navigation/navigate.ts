@@ -16,20 +16,20 @@ const openInfoModal = (navigation) => (props = {}) => {
 };
 
 /* push */
-const openMontlyBudget = (navigation) => (props = {}) => {
-  navigation.push("MonthlyBudget", props);
+const openMontlyConsent = (navigation) => (props = {}) => {
+  navigation.push("MonthlyConsent", props);
 };
 
-const openAddEmission = (navigation) => (props = {}) => {
-  navigation.push("AddEmission", props);
+const openAddPartner = (navigation) => (props = {}) => {
+  navigation.push("AddPartner", props);
 };
 
 const openActDetails = (navigation) => (props = {}) => {
   navigation.push("ActDetail", props);
 };
 
-const openEmissionItem = (navigation) => (props = {}) => {
-  navigation.push("EmissionItem", props);
+const openPartnerItem = (navigation) => (props = {}) => {
+  navigation.push("PartnerItem", props);
 };
 
 const openAbout = (navigation) => (props = {}) => {
@@ -44,6 +44,11 @@ const openNotifications = (navigation) => (props = {}) => {
   navigation.push("Notifications", props);
 };
 
+const openMyPreferences = (navigation) => (props = {}) => {
+  console.log("pushed MyPreferences");
+  navigation.push("MyPreferences", props);
+};
+
 const openSupportUs = (navigation) => (props = {}) => {
   navigation.push("SupportUs", props);
 };
@@ -52,21 +57,22 @@ const openStorybook = (navigation) => (props = {}) => {
   navigation.push("Storybook", props);
 };
 
-const openBudget = (navigation) => (props = {}) => {
-  navigation.push("Budget", props);
+const openConsent = (navigation) => (props = {}) => {
+  navigation.push("Consent", props);
 };
 
 const navigate = (navigation) => ({
   goBack: navigation.goBack,
   openComingSoon: navigateOneTime(openComingSoon(navigation)),
   openInfoModal: navigateOneTime(openInfoModal(navigation)),
-  openBudget: navigateOneTime(openBudget(navigation)),
-  openMontlyBudget: navigateOneTime(openMontlyBudget(navigation)),
-  openAddEmission: navigateOneTime(openAddEmission(navigation)),
+  openConsent: navigateOneTime(openConsent(navigation)),
+  openMontlyConsent: navigateOneTime(openMontlyConsent(navigation)),
+  openAddPartner: navigateOneTime(openAddPartner(navigation)),
   openActDetails: navigateOneTime(openActDetails(navigation)),
-  openEmissionItem: navigateOneTime(openEmissionItem(navigation)),
+  openPartnerItem: navigateOneTime(openPartnerItem(navigation)),
   openAbout: navigateOneTime(openAbout(navigation)),
   openMyLocation: navigateOneTime(openMyLocation(navigation)),
+  openMyPreferences: navigateOneTime(openMyPreferences(navigation)),
   openNotifications: navigateOneTime(openNotifications(navigation)),
   openSupportUs: navigateOneTime(openSupportUs(navigation)),
   openStorybook: navigateOneTime(openStorybook(navigation)),

@@ -12,10 +12,11 @@ import * as Sentry from "sentry-expo";
 import { Provider } from "react-redux";
 import { enableScreens } from "react-native-screens";
 
+import { LocalizationContext } from "utils";
+
 import AppNavigator from "./app/navigation/Navigator/AppNavigator";
 import store from "./app/redux/store";
 import SplashScreen from "./app/screens/Splash";
-import { LocalizationContext } from "./app/utils";
 
 const supportedLanguages: string[] = [
   "en",
@@ -31,13 +32,13 @@ const defaultLanguage = "en";
 const defaultLocale = "en-us";
 
 if (!__DEV__) {
-  const secret =
-    require("./secret.ts").default || require("./secret.example.ts").default;
+  // const secret =
+  //   require("./secret.ts").default || require("./secret.example.ts").default;
 
   /* TODO: change secret.dsn to Constants.manifest.extra.sentryPublicDsn */
   Sentry.init({
-    dsn: secret.dsn,
-    enableInExpoDevelopment: false,
+    // dsn: secret.dsn,
+    enableInExpoDevelopment: true,
     debug: true,
   });
 

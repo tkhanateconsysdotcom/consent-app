@@ -1,10 +1,10 @@
 import { combineReducers } from "@reduxjs/toolkit";
 
-import { emissions, budget, userPreferences } from "ducks";
+import { partners, consent, userPreferences } from "ducks";
 
 const rootReducer = combineReducers({
-  emissions: emissions.reducer,
-  budget: budget.reducer,
+  partners: partners.reducer,
+  consent: consent.reducer,
   userPreferences: userPreferences.reducer,
 });
 

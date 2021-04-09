@@ -12,8 +12,11 @@ const getLocation = (state) =>
 const getActivateNotifications = (state) =>
   pathOr(false, [namespace, "activatedNotifications"], state);
 
+const getPreference = (state) => pathOr([], [namespace, "preferences"], state);
+
 export default {
   getAcceptedTermsOfUseVersion,
   getActivateNotifications,
   getLocation,
+  getPreference,
 };

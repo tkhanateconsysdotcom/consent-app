@@ -14,7 +14,7 @@ i18n.locale = Localization.locale;
  * Pass a translation key and receive a translated string, optionally passing a template value.
  * eg.
  * t('act') // Act
- * t('monthlyEmissionNumber', { co2: '100kg' }) // Your emissions this month 100kg
+ * t('monthlyPartnerNumber', { co2: '100kg' }) // Your partners this month 100kg
  **/
 export function t(
   key: keyof TranslationKeys,

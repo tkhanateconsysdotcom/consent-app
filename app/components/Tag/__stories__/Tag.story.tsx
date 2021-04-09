@@ -13,7 +13,7 @@ const props = {
 
 const iconOptions = {
   airplane: "md-airplane",
-  restaurant: "md-restaurant",
+  romanticDinner: "md-romanticDinner",
   build: "md-build",
   circle: "md-play-circle",
   flash: "md-flash",

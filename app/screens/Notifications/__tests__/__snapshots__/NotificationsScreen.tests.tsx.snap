@@ -17,7 +17,7 @@ exports[`NotificationsScreen renders correctly 1`] = `
       }
     }
   >
-    Receive a notification every Sunday at 9 p.m to remind you to add your weekly emissions.
+    Receive a notification every Sunday at 9 p.m to remind you to add your weekly partners.
   </Text.Primary>
   <View
     style={

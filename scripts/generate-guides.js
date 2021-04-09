@@ -6,7 +6,7 @@ const fm = require("front-matter");
 const MarkdownIt = require("markdown-it");
 const md = new MarkdownIt();
 const data = [];
-const pwd = process.env.PWD
+const pwd = process.env.PWD;
 const guidesPath = `${pwd}/assets/guides/markdown/*.md`;
 
 /*
@@ -59,8 +59,5 @@ glob(guidesPath, {}, function (err, files) {
       .join("\n") +
     "}";
   const res = "export default " + imagePath;
-  fs.writeFileSync(
-    `${pwd}/app/screens/ActDetail/imagePath.ts`,
-    res
-  );
+  fs.writeFileSync(`${pwd}/app/screens/ActDetail/imagePath.ts`, res);
 });

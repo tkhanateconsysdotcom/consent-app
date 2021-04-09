@@ -1,3 +1,3 @@
-import { Emission, EmissionType, EmissionPayload } from "./emission";
+import { Partner, PartnerType, PartnerPayload, Preference } from "./partner";
 
-export { Emission, EmissionType, EmissionPayload };
+export { Partner, PartnerType, PartnerPayload, Preference };

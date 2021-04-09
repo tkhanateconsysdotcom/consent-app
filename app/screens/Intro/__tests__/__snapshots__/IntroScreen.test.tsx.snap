@@ -20,7 +20,7 @@ exports[`renders correctly ComingSoon 1`] = `
     }
   >
     <StickersImage
-      sticker="bike"
+      sticker="treeHeart"
     />
   </View>
   <View
@@ -40,7 +40,7 @@ exports[`renders correctly ComingSoon 1`] = `
         }
       }
     >
-      Welcome to NMF.earth 🌱
+      Welcome to con¢
     </Text.H3>
     <Text.Tertiary
       style={

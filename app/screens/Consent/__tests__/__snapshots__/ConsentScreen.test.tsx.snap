@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ConsentScreen renders correctly 1`] = `
+<RCTScrollView
+  style={
+    Object {
+      "backgroundColor": "#FFFFFF",
+      "flex": 1,
+      "paddingHorizontal": 14,
+    }
+  }
+>
+  <View>
+    <ProgressChart
+      foodPartners={[MockFunction]}
+      isMonth={true}
+      monthlyPartnersConsent={[MockFunction]}
+      otherPartners={[MockFunction]}
+      totalPartners={[MockFunction]}
+      transportPartners={[MockFunction]}
+    />
+    <Button.Primary
+      fullWidth={true}
+      onPress={[Function]}
+      style={
+        Object {
+          "marginVertical": 6,
+        }
+      }
+      textType="Primary"
+    >
+      <Text.Primary
+        bold={true}
+        center={true}
+        white={true}
+      >
+        Set monthly consent
+      </Text.Primary>
+    </Button.Primary>
+    <NumberOfDaysVegetarian />
+    <ProgressChart
+      foodPartners={[MockFunction]}
+      monthlyPartnersConsent={[MockFunction]}
+      otherPartners={[MockFunction]}
+      totalPartners={[MockFunction]}
+      transportPartners={[MockFunction]}
+    />
+  </View>
+</RCTScrollView>
+`;

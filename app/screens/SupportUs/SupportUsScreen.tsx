@@ -9,7 +9,7 @@ import navigationOptions from "./SupportUsScreen.navigationOptions";
 
 const SupportUsScreen = () => (
   <ScrollView style={styles.container}>
-    <StickersImage sticker="restaurant" />
+    <StickersImage sticker="romanticDinner" />
     <Text.H2 style={styles.title}>
       {t("SUPPORT_US_SCREEN_WHY_DONATE_TITLE")}
     </Text.H2>

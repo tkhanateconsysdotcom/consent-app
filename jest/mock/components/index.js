@@ -4,43 +4,43 @@ jest.mock(
   () => "TouchableOpacity"
 );
 
-/* Budget Screen */
+/* Consent Screen */
 jest.mock(
-  "../../../app/screens/Budget/components/ProgressChart",
+  "../../../app/screens/Consent/components/ProgressChart",
   () => "ProgressChart"
 );
 jest.mock(
-  "../../../app/screens/Budget/components/NumberOfDaysVegetarian",
+  "../../../app/screens/Consent/components/NumberOfDaysVegetarian",
   () => "NumberOfDaysVegetarian"
 );
 jest.mock(
-  "../../../app/screens/Budget/components/ProgressChart/components/LegendItem",
+  "../../../app/screens/Consent/components/ProgressChart/components/LegendItem",
   () => "LegendItem"
 );
 jest.mock(
-  "../../../app/screens/Budget/components/ProgressChart/components/Legend",
+  "../../../app/screens/Consent/components/ProgressChart/components/Legend",
   () => "Legend"
 );
 jest.mock(
-  "../../../app/screens/Budget/components/ProgressChart/components/PeriodBudget",
-  () => "PeriodBudget"
+  "../../../app/screens/Consent/components/ProgressChart/components/PeriodConsent",
+  () => "PeriodConsent"
 );
 jest.mock(
-  "../../../app/screens/Budget/components/ProgressChart/components/Chart",
+  "../../../app/screens/Consent/components/ProgressChart/components/Chart",
   () => "Chart"
 );
 
-/* Emissions Screen */
+/* Partners Screen */
 jest.mock(
-  "../../../app/screens/Emissions/components/EmissionsList",
-  () => "EmissionsList"
+  "../../../app/screens/Partners/components/PartnersList",
+  () => "PartnersList"
 );
 jest.mock(
-  "../../../app/screens/Emissions/components/EmissionsListItem",
-  () => "EmissionsListItem"
+  "../../../app/screens/Partners/components/PartnersListItem",
+  () => "PartnersListItem"
 );
 jest.mock(
-  "../../../app/screens/Emissions/components/SectionHeader",
+  "../../../app/screens/Partners/components/SectionHeader",
   () => "SectionHeader"
 );
 
@@ -55,7 +55,7 @@ jest.mock("../../../app/components/StickersImage", () => "StickersImage");
 jest.mock("../../../app/components/TextInput", () => "TextInput");
 jest.mock("../../../app/components/SocialMedia", () => "SocialMedia");
 jest.mock("../../../app/components/Tag", () => "Tag");
-jest.mock("../../../app/components/NoEmission", () => "NoEmission");
+jest.mock("../../../app/components/NoPartner", () => "NoPartner");
 jest.mock("../../../app/components/Text", () => require("./Text.mock").default);
 jest.mock(
   "../../../app/components/Button",

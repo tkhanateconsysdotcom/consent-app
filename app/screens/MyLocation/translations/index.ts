@@ -11,7 +11,7 @@ import pl from "./pl.json";
 interface TranslationKeys {
   MY_LOCATION_SCREEN_TITLE: string;
   MY_LOCATION_SCREEN_INTRO: string;
-  MY_LOCATION_SCREEN_MY_CARBON_INTENSITY: string;
+  MY_LOCATION_SCREEN_MY_ACCEPTANCE_INTENSITY: string;
 }
 
 export { en, fr, de, sv, es, pt, da, ru, pl, TranslationKeys };

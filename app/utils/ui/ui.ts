@@ -7,19 +7,18 @@ import {
 } from "carbon-footprint";
 import { contains, __ } from "ramda";
 
-import { EmissionType } from "interfaces";
+import { PartnerType } from "interfaces";
+import { t } from "utils";
 
-import { t } from "../translations";
+const isElectricityPartner = contains(__, Object.keys(ElectricityEnum));
 
-const isElectricityEmission = contains(__, Object.keys(ElectricityEnum));
-
-const getTranslationModelType = (emissionModelType) => {
-  if (isElectricityEmission(emissionModelType)) {
+const getTranslationModelType = (partnerModelType) => {
+  if (isElectricityPartner(partnerModelType)) {
     return t("UI_ELECTRICITY");
   }
 
-  switch (emissionModelType) {
-    case EmissionType.custom:
+  switch (partnerModelType) {
+    case PartnerType.custom:
       return t("UI_CUSTOM");
     case FoodEnum.redMeat:
       return t("UI_RED_MEAT");
@@ -65,13 +64,13 @@ const getTranslationModelType = (emissionModelType) => {
   }
 };
 
-const getIconFromModelType = (emissionModelType) => {
-  if (isElectricityEmission(emissionModelType)) {
+const getIconFromModelType = (partnerModelType) => {
+  if (isElectricityPartner(partnerModelType)) {
     return "md-flash";
   }
 
-  switch (emissionModelType) {
-    case EmissionType.custom:
+  switch (partnerModelType) {
+    case PartnerType.custom:
       return "md-build";
     case FoodEnum.redMeat:
     case FoodEnum.whiteMeat:

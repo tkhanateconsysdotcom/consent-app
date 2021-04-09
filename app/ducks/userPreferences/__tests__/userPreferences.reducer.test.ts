@@ -10,6 +10,7 @@ describe("userPreferences reducer should", () => {
       acceptedTermsOfUseVersion: 0,
       activatedNotifications: false,
       location: ElectricityEnum.world,
+      preferences: [],
     });
   });
 
@@ -25,6 +26,7 @@ describe("userPreferences reducer should", () => {
       acceptedTermsOfUseVersion: 2,
       activatedNotifications: false,
       location: ElectricityEnum.world,
+      preferences: [],
     });
   });
 
@@ -38,6 +40,7 @@ describe("userPreferences reducer should", () => {
       acceptedTermsOfUseVersion: 0,
       activatedNotifications: false,
       location: ElectricityEnum.belgium,
+      preferences: [],
     });
   });
 
@@ -51,6 +54,7 @@ describe("userPreferences reducer should", () => {
       acceptedTermsOfUseVersion: 0,
       activatedNotifications: true,
       location: ElectricityEnum.world,
+      preferences: [],
     });
   });
 });

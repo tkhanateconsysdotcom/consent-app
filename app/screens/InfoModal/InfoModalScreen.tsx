@@ -9,11 +9,11 @@ import navigationOptions from "./InfoModal.navigationOptions";
 import methodology from "../../../assets/methodology/methodology.json";
 
 const InfoModalScreen = ({ route }) => {
-  const emissionModelType = route?.params?.emissionModelType;
+  const partnerModelType = route?.params?.partnerModelType;
   let html: string;
-  if (emissionModelType) {
+  if (partnerModelType) {
     // TODO: load corresponding html
-    html = `<h2> ${emissionModelType} placeholder </h2>`;
+    html = `<h2> ${partnerModelType} placeholder </h2>`;
   } else {
     html = methodology[0].body;
   }

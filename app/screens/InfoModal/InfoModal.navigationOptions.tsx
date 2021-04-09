@@ -16,9 +16,9 @@ const navigationOptionsAndroid = ({ route }) => ({
     ...ComponentsStyle.header,
   },
   headerTitle: () =>
-    route.params?.emissionModelType ? (
+    route.params?.partnerModelType ? (
       <Text.H1>
-        {ui.getTranslationModelType(route.params.emissionModelType)}
+        {ui.getTranslationModelType(route.params.partnerModelType)}
       </Text.H1>
     ) : (
       <Text.H1>{t("INFO_MODAL_SCREEN_METHODOLOGY")}</Text.H1>
@@ -32,9 +32,9 @@ const navigationOptionsIOS = ({ navigation, route }) => ({
     borderBottomWidth: 0,
   },
   headerTitle: () =>
-    route.params?.emissionModelType ? (
+    route.params?.partnerModelType ? (
       <Text.H1>
-        {ui.getTranslationModelType(route.params.emissionModelType)}
+        {ui.getTranslationModelType(route.params.partnerModelType)}
       </Text.H1>
     ) : (
       <Text.H1>{t("INFO_MODAL_SCREEN_METHODOLOGY")}</Text.H1>

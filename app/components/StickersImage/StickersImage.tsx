@@ -6,16 +6,16 @@ import { ImagesAssets } from "constant";
 import styles from "./StickersImage.styles";
 
 interface Prop {
-  sticker: "restaurant" | "bike" | "earth";
+  sticker: "romanticDinner" | "treeHeart" | "earth";
 }
 
 const StickersImage = ({ sticker }: Prop) => {
   let source = ImagesAssets.stickers.earth;
 
-  if (sticker === "restaurant") {
-    source = ImagesAssets.stickers.restaurant;
-  } else if (sticker === "bike") {
-    source = ImagesAssets.stickers.bike;
+  if (sticker === "romanticDinner") {
+    source = ImagesAssets.stickers.romanticDinner;
+  } else if (sticker === "treeHeart") {
+    source = ImagesAssets.stickers.treeHeart;
   }
 
   return (

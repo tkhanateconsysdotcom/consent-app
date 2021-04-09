@@ -21,7 +21,7 @@ const TextInput = ({
   placeholder,
   title,
 }: Prop) => {
-  const [isVisible, setIsVisible] = useState(isOptional ? false : true);
+  const [isVisible, setIsVisible] = useState(!isOptional);
 
   return (
     <View style={styles.container}>
@@ -40,7 +40,7 @@ const TextInput = ({
         )}
         <Text.H3 green={isOptional}>{title}</Text.H3>
       </TouchableOpacity>
-      {isVisible && (
+      {(isVisible || !isOptional) && (
         <TextInputRN
           placeholder={placeholder}
           style={styles.input}

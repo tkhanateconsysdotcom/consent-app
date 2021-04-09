@@ -10,7 +10,7 @@ import navigationOptions from "./ComingSoonScreen.navigationOptions";
 const ComingSoonScreen = () => {
   return (
     <ScrollView style={styles.container}>
-      <StickersImage sticker="bike" />
+      <StickersImage sticker="treeHeart" />
       <View style={styles.textView}>
         <Text.Primary style={styles.paragraph}>
           {t("COMING_SOON_SCREEN_UNDER_DEVELOPMENT")}

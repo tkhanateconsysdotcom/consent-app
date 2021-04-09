@@ -9,7 +9,8 @@ import SelectableListItem from "./SelectableListItem";
 import ListItem from "./ListItem";
 import HTMLImage from "./HTMLImage";
 import InfoButton from "./InfoButton";
-import NoEmission from "./NoEmission";
+import NoPartner from "./NoPartner";
+import NoPreference from "./NoPreference";
 
 export {
   HTMLImage,
@@ -23,5 +24,6 @@ export {
   Text,
   TextInput,
   InfoButton,
-  NoEmission,
+  NoPartner,
+  NoPreference,
 };

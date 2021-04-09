@@ -45,16 +45,16 @@ const MyLocationScreen = () => {
       <Text.Primary style={styles.intro}>
         {t("MY_LOCATION_SCREEN_INTRO")}
       </Text.Primary>
-      <View style={styles.carbonIntensityContainer}>
-        <Text.Primary style={styles.carbonIntensity}>
-          {t("MY_LOCATION_SCREEN_MY_CARBON_INTENSITY")}
+      <View style={styles.acceptanceIntensityContainer}>
+        <Text.Primary style={styles.acceptanceIntensity}>
+          {t("MY_LOCATION_SCREEN_MY_ACCEPTANCE_INTENSITY")}
         </Text.Primary>
-        <Text.Primary bold green style={styles.carbonIntensity}>
-          {calculation.getCarbonIntensityInGramPerKWHromKgPerJoules(
+        <Text.Primary bold green style={styles.acceptanceIntensity}>
+          {calculation.getAcceptanceIntensityInGramPerKWHromKgPerJoules(
             electricity[ElectricityEnum[location]]
           )}
         </Text.Primary>
-        <Text.Primary bold green style={styles.carbonIntensity}>
+        <Text.Primary bold green style={styles.acceptanceIntensity}>
           {" gCO₂eq/kWh"}
         </Text.Primary>
       </View>

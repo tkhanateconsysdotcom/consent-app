@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MyPreferencesScreen renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#FFFFFF",
+      "flex": 1,
+      "paddingHorizontal": 14,
+    }
+  }
+>
+  <Text.Primary
+    style={
+      Object {
+        "paddingTop": 30,
+      }
+    }
+  >
+    Add any actions you will allow with your partners:
+  </Text.Primary>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+      }
+    }
+  >
+    <TextInput
+      isOptional={false}
+      onChangeText={[Function]}
+      placeholder="Acceptable Actions"
+      title="Please add any preferences you have"
+      value=""
+    />
+  </View>
+  <View>
+    <Button.Primary
+      onPress={[Function]}
+      style={
+        Object {
+          "margin": 14,
+        }
+      }
+      textType="Primary"
+    >
+      <Text.Primary
+        bold={true}
+        center={true}
+        red={true}
+        white={false}
+      >
+        Add Preference
+      </Text.Primary>
+    </Button.Primary>
+  </View>
+  <RCTScrollView
+    style={
+      Object {
+        "borderTopColor": "#DCF0E5",
+        "borderTopWidth": 2,
+      }
+    }
+  >
+    <View>
+      <TouchableOpacity
+        onPress={[Function]}
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+          }
+        }
+      >
+        <Text.Secondary
+          numberOfLines={1}
+          style={
+            Object {
+              "paddingVertical": 20,
+            }
+          }
+        >
+          SELECT A PREFERENCE TO REMOVE
+        </Text.Secondary>
+        <Ionicons
+          color="#9CA6A0"
+          name="ios-chevron-forward-outline"
+          size={26}
+          style={
+            Object {
+              "marginTop": 18,
+            }
+          }
+        />
+      </TouchableOpacity>
+    </View>
+  </RCTScrollView>
+</View>
+`;

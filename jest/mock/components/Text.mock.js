@@ -5,7 +5,7 @@ const TextMock = {
   Primary: "Text.Primary",
   Secondary: "Text.Secondary",
   Tertiary: "Text.Tertiary",
-  Link: "Text.Link"
+  Link: "Text.Link",
 };
 
 export default TextMock;

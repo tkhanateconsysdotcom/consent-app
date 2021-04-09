@@ -7,21 +7,21 @@ import { t } from "utils";
 import { Colors } from "style";
 
 import ActNavigator from "./BottomTab/ActNavigator";
-import BudgetNavigator from "./BottomTab/BudgetNavigator";
-import EmissionsNavigator from "./BottomTab/EmissionsNavigator";
+import ConsentNavigator from "./BottomTab/ConsentNavigator";
+import PartnersNavigator from "./BottomTab/PartnersNavigator";
 import SettingsNavigator from "./BottomTab/SettingsNavigator";
 
 const BottomTab = createBottomTabNavigator();
 
-const BudgetOptions = {
-  tabBarLabel: t("BUDGET_SCREEN_TAB_NAME"),
+const ConsentOptions = {
+  tabBarLabel: t("CONSENT_SCREEN_TAB_NAME"),
   tabBarIcon: ({ focused }) => (
     <TabBarIcon focused={focused} name={"md-calculator"} />
   ),
 };
 
-const EmissionsOptions = {
-  tabBarLabel: t("EMISSIONS_SCREEN_TAB_NAME"),
+const PartnersOptions = {
+  tabBarLabel: t("PARTNERS_SCREEN_TAB_NAME"),
   tabBarIcon: ({ focused }) => (
     <TabBarIcon focused={focused} name={"md-stats-chart-sharp"} />
   ),
@@ -57,14 +57,14 @@ const BottomTabNavigator = (): React.ReactElement => {
       }}
     >
       <BottomTab.Screen
-        name="BudgetNavigator"
-        options={BudgetOptions}
-        component={BudgetNavigator}
+        name="ConsentNavigator"
+        options={ConsentOptions}
+        component={ConsentNavigator}
       />
       <BottomTab.Screen
-        name="EmissionsNavigator"
-        options={EmissionsOptions}
-        component={EmissionsNavigator}
+        name="PartnersNavigator"
+        options={PartnersOptions}
+        component={PartnersNavigator}
       />
       <BottomTab.Screen
         name="Act"

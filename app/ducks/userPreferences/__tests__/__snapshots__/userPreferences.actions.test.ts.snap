@@ -3,6 +3,8 @@
 exports[`userPreferences actions should export expected actions 1`] = `
 Object {
   "acceptTermsOfUse": [Function],
+  "addPreference": [Function],
+  "removePreference": [Function],
   "toggleNotifications": [Function],
   "updateLocation": [Function],
 }

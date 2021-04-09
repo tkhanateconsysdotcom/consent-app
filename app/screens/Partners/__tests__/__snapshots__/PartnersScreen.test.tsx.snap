@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PartnersScreen renders correctly 1`] = `
+Array [
+  <RCTSafeAreaView
+    emulateUnlessSupported={true}
+    style={
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "flex": 1,
+      }
+    }
+  >
+    <PartnersList
+      monthlyAcceptanceConsent={[MockFunction]}
+      partners={[MockFunction]}
+    />
+  </RCTSafeAreaView>,
+  <View
+    style={
+      Object {
+        "bottom": 14,
+        "flexDirection": "row",
+        "left": 14,
+        "position": "absolute",
+        "right": 14,
+      }
+    }
+  >
+    <Button.Primary
+      fullWidth={true}
+      onPress={[Function]}
+      textType="Secondary"
+    >
+      <Text.Secondary
+        bold={true}
+        center={true}
+        numberOfLines={1}
+        white={true}
+      >
+        Add partner
+      </Text.Secondary>
+    </Button.Primary>
+  </View>,
+]
+`;
